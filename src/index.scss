@@ -1,4 +1,4 @@
-
+//npm run watch-css
 $highlight: #FF4835;
 $light-grey: #C6C7C7;
 
@@ -47,10 +47,13 @@ a {
 }
 
 .nav {
-  padding: 30px 25px 30px 25px;
+  padding: 25px 25px 25px 25px;
   margin: 0;
-  position: 'absolute';
+  position: sticky;
   top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
   background-color: white;
   .home {

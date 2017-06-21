@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom'
 import ResumeText from './ResumeText'
 
-//npm run watch-css
 const App = () => (
   <Router>
     <div>
@@ -28,7 +27,7 @@ const App = () => (
 const About = () => (
   <div className='about'>
     <img src="./img/headshot1.png" alt="Profile Image"/>
-    <h3><span className='highlight'>Hello!</span> I&#39;m Jen, an interior designer turned web developer. I am
+    <h3><span className='highlight'>Hello!</span> I&#39;m Jen, interior designer turned web developer. I am
     excited by all things design and enjoy bringing data to life through front end development.</h3>
     <Link to="/resume"><i className="fa fa-chevron-right fixed" aria-hidden="true"></i></Link>
   </div>
