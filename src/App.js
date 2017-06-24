@@ -48,7 +48,7 @@ const Projects = () => (
   <div className='projects'>
     <div className='project'>
       <a href="https://jenboyd.github.io/capstone-ember/">
-        <img src={hostess} alt="Project Image" />;
+        <img src={Hostess} alt="Project Image" />;
       </a>
       <div className='project-info'>
         <h3>Hostess</h3>
@@ -61,7 +61,7 @@ const Projects = () => (
     </div>
     <div className='project'>
       <a href="https://jenboyd.github.io/boston-day-trips/">
-        <img src={bostonDayTrips} alt="Project Image" />;
+        <img src={BostonDayTrips} alt="Project Image" />;
       </a>
       <div className='project-info'>
         <h3>Boston Day Trips</h3>
