@@ -5,6 +5,9 @@ import {
   Link
 } from 'react-router-dom'
 import ResumeText from './ResumeText'
+import Hostess from './img/hostess.jpg';
+import BostonDayTrips from './img/boston-day-trips-landing.jpg';
+import TicTacToe from './img/tic-tac-toe.jpg';
 
 const App = () => (
   <Router>
@@ -45,7 +48,7 @@ const Projects = () => (
   <div className='projects'>
     <div className='project'>
       <a href="https://jenboyd.github.io/capstone-ember/">
-        <img src="./img/hostess.jpg" alt="Hostess Project Image"/>
+        <img src={hostess} alt="Project Image" />;
       </a>
       <div className='project-info'>
         <h3>Hostess</h3>
@@ -58,7 +61,7 @@ const Projects = () => (
     </div>
     <div className='project'>
       <a href="https://jenboyd.github.io/boston-day-trips/">
-        <img src="./img/boston-day-trips-landing.jpg" alt="Boston Day Trips Project Image"/>
+        <img src={bostonDayTrips} alt="Project Image" />;
       </a>
       <div className='project-info'>
         <h3>Boston Day Trips</h3>
@@ -72,7 +75,7 @@ const Projects = () => (
     </div>
     <div className='project'>
       <a href="https://jenboyd.github.io/tic-tac-toe/">
-        <img src="./img/tic-tac-toe.jpg" alt="TicTacToe Project Image"/>
+        <img src={TicTacToe} alt="Project Image" />;
       </a>
       <div className='project-info'>
         <h3>Tic Tac Toe</h3>
