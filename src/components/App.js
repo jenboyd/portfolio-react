@@ -5,24 +5,45 @@ import {
   Link
 } from 'react-router-dom'
 import ResumeText from './ResumeText'
-import Hostess from './img/hostess.jpg';
-import BostonDayTrips from './img/boston-day-trips-landing.jpg';
-import TicTacToe from './img/tic-tac-toe.jpg';
+import Hostess from '../img/hostess.jpg';
+import BostonDayTrips from '../img/boston-day-trips-landing.jpg';
+import TicTacToe from '../img/tic-tac-toe.jpg';
 
 const App = () => (
   <Router>
     <div>
-      <div className='nav'>
-        <div className='home'><Link to="/">JB</Link></div>
-        <div className='nav-links-wrapper'>
-          <Link to="/resume" className='nav-link'>Resume</Link>
-          <Link to="/projects" className='nav-link'>Projects</Link>
+      <div className='container'>
+        <div className='nav'>
+          <div className='home'>
+            <Link to="/">
+              <div className='logo'>
+                <h1>Jennifer Boyd</h1>
+                <p>Web Developer & Designer</p>
+              </div>
+            </Link>
+          </div>
+          <div className='nav-links-wrapper'>
+            <Link to="/resume" className='nav-link'>Resume</Link>
+            <Link to="/about" className='nav-link'>About</Link>
+          </div>
         </div>
+
+        <div className='route-container'>
+          <Route exact path="/" component={Projects}/>
+          <Route path="/resume" component={Resume}/>
+          <Route path="/about" component={About}/>
+          <Route path="/interior-design" component={InteriorDesign}/>
+        </div>
+
+
+        <footer>
+          <p>hello@jennifer-boyd.com</p>
+          <div className='social'>
+            <i className="fa fa-github" aria-hidden="true" />
+            <i className="fa fa-linkedin-square" aria-hidden="true" />
+          </div>
+        </footer>
       </div>
-      <Route exact path="/" component={About}/>
-      <Route path="/resume" component={Resume}/>
-      <Route path="/projects" component={Projects}/>
-      <Route path="/interior-design" component={InteriorDesign}/>
     </div>
   </Router>
 )
@@ -30,17 +51,17 @@ const App = () => (
 const About = () => (
   <div className='about'>
     <img src="./img/headshot1.png" alt="Profile Image"/>
-    <h3><span className='highlight'>Hello!</span> I&#39;m Jen, interior designer turned web developer. I am
-    excited by all things design and enjoy bringing data to life through front end development.</h3>
-    <Link to="/resume"><i className="fa fa-chevron-right fixed" aria-hidden="true"></i></Link>
+    <h2>Hello!</h2>
+    <p>I am an interior designer turned web developer. I carry my passion for design
+    into every development project and am excited about using the latest front end
+    technologies to create engaging user experiences on the web.
+    </p>
   </div>
 )
 
 const Resume = () => (
   <div className='resume'>
     <ResumeText/>
-    <Link to="/"><i className="fa fa-chevron-left" aria-hidden="true"></i></Link>
-    <Link to="/projects"><i className="fa fa-chevron-right fixed" aria-hidden="true"></i></Link>
   </div>
 )
 
@@ -48,7 +69,7 @@ const Projects = () => (
   <div className='projects'>
     <div className='project'>
       <a href="https://jenboyd.github.io/capstone-ember/">
-        <img src={Hostess} alt="Project Image" />;
+        <img src={Hostess} alt="Project Image" />
       </a>
       <div className='project-info'>
         <h3>Hostess</h3>
@@ -61,7 +82,7 @@ const Projects = () => (
     </div>
     <div className='project'>
       <a href="https://jenboyd.github.io/boston-day-trips/">
-        <img src={BostonDayTrips} alt="Project Image" />;
+        <img src={BostonDayTrips} alt="Project Image" />
       </a>
       <div className='project-info'>
         <h3>Boston Day Trips</h3>
@@ -75,7 +96,7 @@ const Projects = () => (
     </div>
     <div className='project'>
       <a href="https://jenboyd.github.io/tic-tac-toe/">
-        <img src={TicTacToe} alt="Project Image" />;
+        <img src={TicTacToe} alt="Project Image" />
       </a>
       <div className='project-info'>
         <h3>Tic Tac Toe</h3>
@@ -83,14 +104,13 @@ const Projects = () => (
         <p>My first app built during General Assembly&#39;s Web Development Immersive program. My take on a traditional tic-tac-toe game built with JavaScript.</p>
       </div>
     </div>
-    <Link to="/interior-design"><p className='interior-links'>Interior Design Projects<i className="fa fa-chevron-right mini" aria-hidden="true"></i></p></Link>
-    <Link to="/resume"><i className="fa fa-chevron-left" aria-hidden="true"></i></Link>
+    <Link to="/interior-design"><p className='interior-links'>Interior Design Projects<i className="fa fa-angle-right mini" aria-hidden="true"></i></p></Link>
   </div>
 )
 
 const InteriorDesign = () => (
   <div className='interior-design'>
-    <h3>Interior Design Projects</h3>
+    <h2>Interior Design</h2>
     <p>All renderings are undergraduate projects created using a combination of Sketchup, Revit, and Photoshop.</p>
 
     <div className='images'>
@@ -114,8 +134,6 @@ const InteriorDesign = () => (
       <img src="./img/design/spa_3.jpg" alt="Design Project Image"/>
       <img src="./img/design/spa_4.jpg" alt="Design Project Image"/>
     </div>
-    <Link to="/projects"><i className="fa fa-chevron-left" aria-hidden="true"></i></Link>
-
   </div>
 )
 
