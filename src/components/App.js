@@ -5,9 +5,12 @@ import {
   Link
 } from 'react-router-dom'
 import ResumeText from './ResumeText'
+import InteriorDesign from './InteriorDesign'
+
 import Hostess from '../img/hostess.jpg';
 import BostonDayTrips from '../img/boston-day-trips-landing.jpg';
 import TicTacToe from '../img/tic-tac-toe.jpg';
+import Headshot from '../img/headshot1.png';
 
 const App = () => (
   <Router>
@@ -18,7 +21,6 @@ const App = () => (
             <Link to="/">
               <div className='logo'>
                 <h1>Jennifer Boyd</h1>
-                <p>Web Developer & Designer</p>
               </div>
             </Link>
           </div>
@@ -50,7 +52,7 @@ const App = () => (
 
 const About = () => (
   <div className='about'>
-    <img src="./img/headshot1.png" alt="Profile Image"/>
+    <img src={Headshot} alt="Headshot" />
     <h2>Hello!</h2>
     <p>I am an interior designer turned web developer. I carry my passion for design
     into every development project and am excited about using the latest front end
@@ -105,35 +107,6 @@ const Projects = () => (
       </div>
     </div>
     <Link to="/interior-design"><p className='interior-links'>Interior Design Projects<i className="fa fa-angle-right mini" aria-hidden="true"></i></p></Link>
-  </div>
-)
-
-const InteriorDesign = () => (
-  <div className='interior-design'>
-    <h2>Interior Design</h2>
-    <p>All renderings are undergraduate projects created using a combination of Sketchup, Revit, and Photoshop.</p>
-
-    <div className='images'>
-      <img src="./img/design/Agency_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/Agency_3.jpg" alt="Design Project Image"/>
-      <img src="./img/design/Agency_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/apt_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/apt_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/LivingArea.jpg" alt="Design Project Image"/>
-      <img src="./img/design/helsinki_lobby.jpg" alt="Design Project Image"/>
-      <img src="./img/design/hermosa_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/hermosa_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/hotel_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/hotel_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/lounge_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/Workstation.jpg" alt="Design Project Image"/>
-      <img src="./img/design/rehab_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/rehab_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/spa_1.jpg" alt="Design Project Image"/>
-      <img src="./img/design/spa_2.jpg" alt="Design Project Image"/>
-      <img src="./img/design/spa_3.jpg" alt="Design Project Image"/>
-      <img src="./img/design/spa_4.jpg" alt="Design Project Image"/>
-    </div>
   </div>
 )
 
