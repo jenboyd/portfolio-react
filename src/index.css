@@ -13,7 +13,7 @@ body {
     margin: 0px auto; }
   @media only screen and (max-width: 500px) {
     .container {
-      margin: 475px auto; } }
+      margin: 515px auto; } }
 
 .route-container {
   width: 90%;
@@ -22,7 +22,7 @@ body {
   @media only screen and (max-width: 1350px) {
     .route-container {
       width: 90%;
-      margin: 30px auto; } }
+      margin: 250px auto; } }
 
 a {
   text-decoration: none;
@@ -136,7 +136,7 @@ a {
         padding-right: 0px; }
         .nav .home .logo,
         .nav .home h2 {
-          padding: 0px 0px 20px 20px; }
+          padding: 20px 0px 20px 20px; }
       .nav .nav-links-wrapper {
         display: none; } }
 

@@ -24,9 +24,8 @@ body {
     transition: all 1s;
     margin: 0px auto;
   }
-
   @media only screen and (max-width: 500px) {
-    margin: 475px auto;
+    margin: 515px auto;
   }
 }
 
@@ -36,7 +35,7 @@ body {
   min-height: calc(100vh - 175px);
   @media only screen and (max-width: 1350px) {
     width: 90%;
-    margin: 30px auto;
+    margin: 250px auto;
   }
 }
 
@@ -176,7 +175,7 @@ a {
       padding-right: 0px;
       .logo,
       h2 {
-        padding: 0px 0px 20px 20px;
+        padding: 20px 0px 20px 20px;
       }
     }
     .nav-links-wrapper {
