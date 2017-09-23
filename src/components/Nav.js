@@ -7,6 +7,18 @@ import {
 } from 'react-router-dom';
 
 class Nav extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      mobileMenu: false
+    }
+  }
+
+  toggleMenu() {
+    const currentState = this.state.mobileMenu;
+    this.setState({ mobileMenu: !currentState })
+  }
+
   render() {
 
     $(window).scroll(function() {
@@ -25,6 +37,17 @@ class Nav extends React.Component {
       <div className='nav'>
 
         <div className='home'>
+
+          <div className={`nav-mobile-wrapper ${this.state.mobileMenu ? '' : 'collapse'} `}>
+              <Link to="/" className='nav-link' onClick={() => this.toggleMenu()}>Projects</Link>
+              <Link to="/resume" className='nav-link' onClick={() => this.toggleMenu()}>Resume</Link>
+              <Link to="/about" className='nav-link' onClick={() => this.toggleMenu()}>About</Link>
+          </div>
+
+          <div className='nav-mobile-menu-button' onClick={() => this.toggleMenu()}>
+            <i className="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+
           <div className='logo'>
             <h1>jb</h1>
           </div>

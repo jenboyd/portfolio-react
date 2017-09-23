@@ -17,6 +17,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+
           <Nav />
           <div className='container'>
             <div className='route-container'>

@@ -3,6 +3,8 @@ $base-grey: #333333;
 $light-grey: #BBB;
 $medium-grey: #999999;
 $black-blue: #151A26;
+$black-blue-medium: #2A3145;
+$black-blue-light: #38415C;
 $grey-blue: #7E8591;
 
 
@@ -21,6 +23,10 @@ body {
   &.collapse {
     transition: all 1s;
     margin: 0px auto;
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin: 475px auto;
   }
 }
 
@@ -86,6 +92,14 @@ a {
       transition: all .5s;
     }
   }
+  .nav-mobile-menu-button {
+    display: none;
+  }
+  .nav-mobile-wrapper {
+    transition: all .5s;
+    visibility: collapse;
+    height: 0px;
+  }
   .nav-links-wrapper {
     width: 50%;
     display: flex;
@@ -112,19 +126,62 @@ a {
         visibility: hidden;
         margin: 0;
         color: transparent;
+        padding: 0px;
       }
     }
   }
 
   @media only screen and (max-width: 500px) {
+    padding: 0px;
+    .nav-mobile-menu-button {
+      display: flex;
+      color: $black-blue-light;
+      justify-content: center;
+      background-color: $black-blue;
+    }
+    .fa {
+      font-size: 30px;
+    }
+    .nav-mobile-wrapper {
+      width: 100%;
+      transition: all .2s;
+      visibility: visible;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      .nav-link {
+        visibility: visible;
+        height: 35px;
+        transition: all .2s;
+        background-color: $black-blue-medium;
+        text-transform: uppercase;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+      }
+      &.collapse {
+        transition: all .2s;
+        visibility: collapse;
+        height: 0px;
+        .nav-link {
+          transition: all .2s;
+          visibility: collapse;
+          height: 0px;
+          color: transparent;
+        }
+      }
+    }
     .home {
       width: 100%;
-      h2 { width: 100%; }
+      padding-right: 0px;
+      .logo,
+      h2 {
+        padding: 0px 0px 20px 20px;
+      }
     }
     .nav-links-wrapper {
       display: none;
     }
-
   }
 }
 
@@ -147,6 +204,14 @@ a {
   }
   img {
     height: 350px;
+  }
+  @media only screen and (max-width: 500px) {
+    p {
+      width: 100%;
+    }
+    img {
+      height: 200px;
+    }
   }
 }
 
@@ -214,6 +279,9 @@ a {
     li {
       margin-bottom: 20px;
     }
+  }
+  @media only screen and (max-width: 500px) {
+    width: auto;
   }
 }
 .projects {
@@ -291,6 +359,11 @@ a {
   }
   .interior-links:hover {
    color: $grey-blue;
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    width: 95%;
   }
 }
 
