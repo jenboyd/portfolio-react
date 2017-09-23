@@ -1,25 +1,33 @@
 //npm run watch-css
 $base-grey: #333333;
-$highlight: #949293;
 $light-grey: #BBB;
 $medium-grey: #999999;
+$black-blue: #151A26;
+$grey-blue: #7E8591;
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $base-grey;
 }
 
 .container {
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 375px auto;
+  transition: all 1s;
+
+  &.collapse {
+    transition: all 1s;
+    margin: 0px auto;
+  }
 }
 
 .route-container {
   width: 90%;
   margin: 50px auto;
-  min-height: calc(100vh - 350px);
+  min-height: calc(100vh - 175px);
   @media only screen and (max-width: 1350px) {
     width: 90%;
     margin: 30px auto;
@@ -46,61 +54,99 @@ a {
 }
 
 .nav {
-  padding: 25px 25px 25px 25px;
   margin: 0;
   display: flex;
+  align-items: flex-start;
+  padding: 20px 40px;
+  background-color: $black-blue;
+  position: fixed;
+  z-index: 3;
+  top:0;
+  left: 0;
+  right: 0;
   .home {
     width: 50%;
-    .logo {
-      text-align: center;
-      width: fit-content;
-    }
+    padding-right: 20px;
     h1 {
-      font-size: 36px;
+      margin: 0;
+      color: white;
       font-weight: 300;
-      letter-spacing: 2px;
-      margin: 0;
-      font-family: 'Open Sans', serif;
+      text-transform: uppercase;
     }
-    P {
-      font-size: 12px;
-      font-weight: 100;
-      margin: 0;
-      font-family: 'Open Sans', serif;
+    h2 {
+      font-size: 32px;
+      width: 80%;
+      color: white;
+      margin: 70px 0;
+      font-family: ff-tisa-web-pro, serif;
+      font-style: normal;
+      font-weight: 400;
+      visibility: visible;
+      height: auto;
+      transition: all .5s;
     }
   }
   .nav-links-wrapper {
-    display: flex;
     width: 50%;
+    display: flex;
     justify-content: flex-end;
-    padding-top: 3px;
+    margin-top: 15px;
   }
   .nav-link {
-    display: inline-flex;
-    padding-right: 50px;
-    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 25px;
+    letter-spacing: 1.5px;
+    font-size: 12px;
     align-items: flex-end;
+    font-weight: 300;
   }
   .nav-link:hover {
-   color: $highlight;
+   color: $grey-blue;
+  }
+  &.collapse {
+    .home {
+      h2 {
+        transition: all .5s;
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+        color: transparent;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .home {
+      width: 100%;
+      h2 { width: 100%; }
+    }
+    .nav-links-wrapper {
+      display: none;
+    }
+
   }
 }
 
 .about {
-  text-align: center;
-  margin: 0 auto;
-  width: 60%;
-  img {
-    max-width: 40%;
-    height: auto;
+  display: flex;
+  div {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  h2 {
-    font-size: 40px;
-    font-weight: 300;
-    font-family: 'Bad Script', cursive;
-    @media only screen and (max-width: 500px) {
-      font-size: 30px;
-    }
+  p {
+    width: 50%;
+    padding-top: 50px;
+    font-family: ff-tisa-web-pro, serif;
+    font-size: 18px;
+    color: $grey-blue;
+  }
+  img {
+    height: 350px;
   }
 }
 
@@ -110,19 +156,21 @@ a {
   margin: 0 auto;
   width: 60%;
   h3 {
-    margin: 0 0 25px 0;
-    font-size: 30px;
+    margin: 0 0 15px 0;
+    font-size: 22px;
     font-weight: 300;
-    font-family: 'Bad Script', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
   li {
     font-weight: 300;
   }
   h4 {
-    margin: 5px;
+    margin: 5px 0px;
+    color: $black-blue;
   }
   a h4:hover {
-    color: $highlight;
+    color: $grey-blue;
   }
   section {
     width: 100%;
@@ -131,7 +179,7 @@ a {
   .technologies .icons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: fit-content;
     margin: 0 auto 15px auto;
    i {
@@ -169,46 +217,80 @@ a {
   }
 }
 .projects {
-  font-size: 16px;
-  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
   margin: 0 auto;
-  width: 60%;
-  h3 {
-    margin: 0;
-  }
-  a img {
-    max-width: 501px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    @media only screen and (max-width: 800px) {
-      max-width: 100%;
-    }
-    &:hover {
-      cursor: pointer;
-      opacity: .3;
-    }
-  }
+
   .project {
     display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
-    .project-info {
-      margin-left: 25px;
+    width: 500px;
+
+    h3 {
+      margin: 15px 0px;
+      padding: 10px 0px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: .5px dotted $grey-blue;
     }
+    a img {
+      width: 500px;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+      @media only screen and (max-width: 800px) {
+        width: 100%;
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: .3;
+      }
+    }
+
+    h4 {
+      color: $black-blue;
+      margin: 10px 20px 10px 0px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .login {
+      .login-info {
+        margin: 5px 0;
+        color: $grey-blue;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      p {
+        margin: 10px 0;
+      }
+    }
+
     @media only screen and (max-width: 800px) {
       justify-content: center;
       flex-wrap: wrap;
+      width: 100%;
       .project-info {
         margin-left: 0px;
         max-width: 500px;
       }
     }
   }
+
   .interior-links {
    margin: 70px auto;
    font-weight: 400;
    text-align: center;
   }
   .interior-links:hover {
-   color: $highlight;
+   color: $grey-blue;
   }
 }
 

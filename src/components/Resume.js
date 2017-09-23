@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ResumeText = () => (
+const Resume = () => (
   <div className='resume-text'>
 
       <section className='technologies'>
@@ -13,10 +13,13 @@ const ResumeText = () => (
           <i className="devicon-html5-plain-wordmark"></i>
           <i className="devicon-css3-plain-wordmark"></i>
           <i className="devicon-sass-original"></i>
+          <i className="devicon-less-plain-wordmark"></i>
 
           <i className="devicon-ruby-plain-wordmark"></i>
           <i className="devicon-git-plain-wordmark"></i>
+          <i className="devicon-grunt-line-wordmark"></i>
           <i className="devicon-photoshop-line"></i>
+          <i className="devicon-illustrator-line"></i>
         </div>
       </section>
 
@@ -62,4 +65,4 @@ const ResumeText = () => (
   </div>
 )
 
-export default ResumeText
+export default Resume
