@@ -152,12 +152,11 @@ a {
       width: 100%;
       transition: all .2s;
       visibility: visible;
-      height: 140px;
+      height: 150px;
       display: flex;
       flex-direction: column;
       .nav-link {
         visibility: visible;
-        height: 35px;
         transition: all .2s;
         background-color: $black-blue-medium;
         text-transform: uppercase;
@@ -181,7 +180,7 @@ a {
       width: 100%;
       padding-right: 0px;
       .logo {
-        padding: 25px 0px 25px 20px;
+        margin: -20px 0px 25px 20px;
       }
       h2 {
         width: 80%;
