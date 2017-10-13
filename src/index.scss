@@ -1,4 +1,3 @@
-//npm run watch-css
 $base-grey: #333333;
 $light-grey: #BBB;
 $medium-grey: #999999;
@@ -24,8 +23,12 @@ body {
     transition: all 1s;
     margin: 0px auto;
   }
+  @media only screen and (max-width: 1400px) {
+    margin: 450px auto;
+  }
+
   @media only screen and (max-width: 500px) {
-    margin: 515px auto;
+    margin: 520px auto;
   }
 }
 
@@ -130,7 +133,7 @@ a {
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1000px) {
     padding: 0px;
     .nav-mobile-menu-button {
       display: flex;
@@ -139,7 +142,7 @@ a {
       background-color: $black-blue;
     }
     .fa {
-      font-size: 30px;
+      font-size: 40px;
     }
     .nav-mobile-wrapper {
       width: 100%;
@@ -175,7 +178,7 @@ a {
       padding-right: 0px;
       .logo,
       h2 {
-        padding: 20px 0px 20px 20px;
+        padding: 10px 0px 10px 20px;
       }
     }
     .nav-links-wrapper {
@@ -286,14 +289,12 @@ a {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
+  justify-content: center;
 
   .project {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin: 0 30px 50px 30px;
     width: 500px;
 
     h3 {
@@ -361,8 +362,8 @@ a {
   }
 
 
-  @media only screen and (max-width: 500px) {
-    width: 95%;
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
   }
 }
 

@@ -11,9 +11,12 @@ body {
   .container.collapse {
     transition: all 1s;
     margin: 0px auto; }
+  @media only screen and (max-width: 1400px) {
+    .container {
+      margin: 450px auto; } }
   @media only screen and (max-width: 500px) {
     .container {
-      margin: 515px auto; } }
+      margin: 520px auto; } }
 
 .route-container {
   width: 90%;
@@ -96,7 +99,7 @@ a {
     margin: 0;
     color: transparent;
     padding: 0px; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1000px) {
     .nav {
       padding: 0px; }
       .nav .nav-mobile-menu-button {
@@ -105,7 +108,7 @@ a {
         justify-content: center;
         background-color: #151A26; }
       .nav .fa {
-        font-size: 30px; }
+        font-size: 40px; }
       .nav .nav-mobile-wrapper {
         width: 100%;
         transition: all .2s;
@@ -136,7 +139,7 @@ a {
         padding-right: 0px; }
         .nav .home .logo,
         .nav .home h2 {
-          padding: 20px 0px 20px 20px; }
+          padding: 10px 0px 10px 20px; }
       .nav .nav-links-wrapper {
         display: none; } }
 
@@ -219,13 +222,11 @@ a {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto; }
+  justify-content: center; }
   .projects .project {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin: 0 30px 50px 30px;
     width: 500px; }
     .projects .project h3 {
       margin: 15px 0px;
@@ -272,9 +273,9 @@ a {
     text-align: center; }
   .projects .interior-links:hover {
     color: #7E8591; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1300px) {
     .projects {
-      width: 95%; } }
+      width: 100%; } }
 
 .interior-design {
   font-size: 16px;
