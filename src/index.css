@@ -11,12 +11,15 @@ body {
   .container.collapse {
     transition: all 1s;
     margin: 0px auto; }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1300px) {
     .container {
-      margin: 450px auto; } }
+      margin: 450px auto 200px auto; } }
+  @media only screen and (max-width: 1299px) {
+    .container {
+      margin: 400px auto 200px auto; } }
   @media only screen and (max-width: 500px) {
     .container {
-      margin: 520px auto; } }
+      margin: 475px auto 200px auto; } }
 
 .route-container {
   width: 90%;
@@ -54,7 +57,7 @@ a {
   right: 0; }
   .nav .home {
     width: 50%;
-    padding-right: 20px; }
+    padding-right: 15px; }
     .nav .home h1 {
       margin: 0;
       color: white;
@@ -62,7 +65,7 @@ a {
       text-transform: uppercase; }
     .nav .home h2 {
       font-size: 32px;
-      width: 80%;
+      width: auto;
       color: white;
       margin: 70px 0;
       font-family: ff-tisa-web-pro, serif;
@@ -137,9 +140,12 @@ a {
       .nav .home {
         width: 100%;
         padding-right: 0px; }
-        .nav .home .logo,
+        .nav .home .logo {
+          padding: 25px 0px 25px 20px; }
         .nav .home h2 {
-          padding: 10px 0px 10px 20px; }
+          width: 80%;
+          padding: 40px 0px 70px 20px;
+          margin: 0; }
       .nav .nav-links-wrapper {
         display: none; } }
 
@@ -150,14 +156,13 @@ a {
     padding: 30px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center; }
+    align-items: center; }
   .about p {
     width: 50%;
     padding-top: 50px;
+    font-weight: 300;
     font-family: ff-tisa-web-pro, serif;
-    font-size: 18px;
-    color: #7E8591; }
+    font-size: 16px; }
   .about img {
     height: 350px; }
   @media only screen and (max-width: 500px) {
@@ -191,12 +196,15 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: fit-content;
+    width: auto;
     margin: 0 auto 15px auto; }
     .resume-text .technologies .icons i {
       color: #333333;
       margin: 15px;
       font-size: 50px; }
+    @media only screen and (max-width: 500px) {
+      .resume-text .technologies .icons {
+        width: 80%; } }
   .resume-text .education {
     display: flex;
     flex-wrap: wrap; }
@@ -229,14 +237,13 @@ a {
     margin: 0 30px 50px 30px;
     width: 500px; }
     .projects .project h3 {
-      margin: 15px 0px;
+      margin: 10px 0px 0px 0px;
       padding: 10px 0px;
       font-weight: 300;
       letter-spacing: 2px;
       font-size: 22px;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      border-bottom: 0.5px dotted #7E8591; }
+      text-transform: uppercase; }
     .projects .project a img {
       width: 500px;
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); }
@@ -248,7 +255,7 @@ a {
         opacity: .3; }
     .projects .project h4 {
       color: #151A26;
-      margin: 10px 20px 10px 0px; }
+      margin: 5px 20px 10px 0px; }
     .projects .project p {
       font-size: 18px;
       font-weight: 300; }
@@ -263,7 +270,8 @@ a {
       .projects .project {
         justify-content: center;
         flex-wrap: wrap;
-        width: 100%; }
+        width: 100%;
+        margin: 0; }
         .projects .project .project-info {
           margin-left: 0px;
           max-width: 500px; } }

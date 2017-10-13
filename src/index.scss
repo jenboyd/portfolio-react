@@ -23,12 +23,16 @@ body {
     transition: all 1s;
     margin: 0px auto;
   }
-  @media only screen and (max-width: 1400px) {
-    margin: 450px auto;
+  @media only screen and (max-width: 1300px) {
+    margin: 450px auto 200px auto;
+  }
+
+  @media only screen and (max-width: 1299px) {
+    margin: 400px auto 200px auto;
   }
 
   @media only screen and (max-width: 500px) {
-    margin: 520px auto;
+    margin: 475px auto 200px auto;
   }
 }
 
@@ -74,7 +78,7 @@ a {
   right: 0;
   .home {
     width: 50%;
-    padding-right: 20px;
+    padding-right: 15px;
     h1 {
       margin: 0;
       color: white;
@@ -83,7 +87,7 @@ a {
     }
     h2 {
       font-size: 32px;
-      width: 80%;
+      width: auto;
       color: white;
       margin: 70px 0;
       font-family: ff-tisa-web-pro, serif;
@@ -176,9 +180,13 @@ a {
     .home {
       width: 100%;
       padding-right: 0px;
-      .logo,
+      .logo {
+        padding: 25px 0px 25px 20px;
+      }
       h2 {
-        padding: 10px 0px 10px 20px;
+        width: 80%;
+        padding: 40px 0px 70px 20px;
+        margin: 0;
       }
     }
     .nav-links-wrapper {
@@ -195,14 +203,13 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
   p {
     width: 50%;
     padding-top: 50px;
+    font-weight: 300;
     font-family: ff-tisa-web-pro, serif;
-    font-size: 18px;
-    color: $grey-blue;
+    font-size: 16px;
   }
   img {
     height: 350px;
@@ -247,12 +254,15 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: fit-content;
+    width: auto;
     margin: 0 auto 15px auto;
    i {
       color: $base-grey;
       margin: 15px;
       font-size: 50px;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 80%;
     }
   }
   .education {
@@ -298,14 +308,13 @@ a {
     width: 500px;
 
     h3 {
-      margin: 15px 0px;
+      margin: 10px 0px 0px 0px;
       padding: 10px 0px;
       font-weight: 300;
       letter-spacing: 2px;
       font-size: 22px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      border-bottom: .5px dotted $grey-blue;
     }
     a img {
       width: 500px;
@@ -321,7 +330,7 @@ a {
 
     h4 {
       color: $black-blue;
-      margin: 10px 20px 10px 0px;
+      margin: 5px 20px 10px 0px;
     }
 
     p {
@@ -345,6 +354,7 @@ a {
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
+      margin: 0;
       .project-info {
         margin-left: 0px;
         max-width: 500px;
